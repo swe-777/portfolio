@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --Purple-700: hsl(257, 40%, 49%);
+    --Magenta-400: hsl(300, 69%, 71%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2,p{
+    color: #fff;
+}
+
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(../images/bg-desktop.svg);
+    background-color: var(--Purple-700);
+    background-size: contain;
+    background-repeat: no-repeat;
+    section{
+        padding: 1rem 6rem;
+        .title{
+            padding: 1rem;
+            img{
+                width: 130px;
+            }
+        }
+        .main-container{
+            display: flex;
+            margin-top: 15px;
+            .img-container{
+                padding: 1.2rem;
+                max-width: 90vw;
+                height: 70vh;
+                img{
+                    width: inherit;
+                    height: inherit;
+                    object-fit: contain;
+                }
+            }
+            .content{
+                margin: 2.5rem 1rem;
+                padding: 1rem;
+                max-width: 35%;
+                h2{
+                    font-weight: 600;
+                    font-size: 2rem;
+                }
+                p{
+                    margin: 1rem 0;
+                    opacity: 0.8;
+                    line-height: 1.2rem;
+                    font-size: 0.85rem;
+                }
+                button{
+                    padding: 0.6rem 3rem;
+                    color: var(--Purple-700);
+                    border: 0;
+                    border-radius: 30px;
+                    transition: 1s;
+                    &:hover{
+                        background-color: var(--Magenta-400);
+                        color: #fff;
+
+                    }
+                }
+            }
+        }
+        .icon-container{
+            margin-top: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            .icons{
+                display: flex;
+                gap: 1rem;
+                
+                }
+                a{  
+                    width: 30px;
+                    height: 30px;
+                    border: 0.4px solid #fff;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    text-decoration: none;
+                    opacity: 0.8;
+                    transition-duration: 1s;
+                    &:hover{
+                        border-color: var(--Magenta-400);
+                        color: var(--Magenta-400);
+                    }
+                    i{
+                        font-size: 15px;
+                        }
+            }
+        }
+    }
+}

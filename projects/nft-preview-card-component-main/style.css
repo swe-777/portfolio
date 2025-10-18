@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Outfit:wght@100..900&display=swap');
+
+:root{
+--Blue-500: hsl(215, 51%, 70%);
+--Cyan-400: hsl(178, 100%, 50%);
+--Blue-950: hsl(217, 54%, 11%);
+--Blue-900: hsl(216, 50%, 16%);
+--Blue-800: hsl(215, 32%, 27%);
+--White:hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container{
+    background-color: var(--Blue-950);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card{
+        width: 300px;
+        background-color: var(--Blue-900);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        .img-container{
+            /* width: 100%; */
+            position: relative;
+            height: 270px;
+            &:hover{
+                &::before{
+                    content: "";
+                    background-color: rgba(0, 255, 255, 0.425);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: inherit;
+                    z-index: 1;
+                    border-radius: 0.5rem;
+                }
+                .view-img{
+                    display: block;
+                }
+            }
+            .main-img{
+                /* width: inherit; */
+                width: 100%;
+                border-radius: 0.5rem;
+                object-fit: contain;
+                height: inherit;
+                border-radius: 0.5rem;
+            }
+            .view-img{
+                position: absolute;
+                inset: 0;
+                margin: auto;
+                width: 40px;
+                height: 40px;
+                z-index: 2;
+                /* top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); */
+            }
+        }
+        .content{
+            h2{
+                margin: 0.8rem 0;
+                color: var(--White);
+                font-size: 18px;
+                font-weight: 600;
+                &:hover{
+                    color: var(--Cyan-400);
+                }
+            }
+            p{
+                color: var(--Blue-500);
+                font-weight: 300;
+                font-size: 0.8rem;
+            }
+        }
+        .eth-time-container{
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 0;
+            .eth, .time{
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                h4{
+                    font-size: 0.8rem;
+                }
+            }
+            .eth{
+                img{
+
+                }
+                h4{
+                    color: var(--Cyan-400);
+                }
+            }
+            .time{
+                img{
+
+                }
+                h4{
+                    color: var(--Blue-500);
+                }
+            }
+        }
+        hr{
+            border: 1px solid var(--Blue-800);
+        }
+        .profile{
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 0.8rem;
+            align-items: center;
+            img{
+                width: 25px;
+                height: 25px;
+                border: 1px solid var(--White);
+                border-radius: 50%;
+            }
+            p{
+                color: var(--Blue-500);
+                font-size: 0.8rem;
+                span{
+                    color: var(--White);
+                    &:hover{
+                        color: var(--Cyan-400);
+                    }
+                }
+            }
+        }
+    }
+}
